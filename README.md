@@ -12,14 +12,9 @@ The following datasets are only needed for follow-up analyses or confirmations o
 * [Sprime archaic site calls](https://data.mendeley.com/datasets/y7hyt83vxr/1)
 * [Introgression tracts from Steinruecken et al. 2018](https://onlinelibrary-wiley-com.revproxy.brown.edu/doi/full/10.1111/mec.14565)
 * [Introgression tracts from Sankararaman et al. 2016](https://pubmed.ncbi.nlm.nih.gov/27032491/)
-* [Introgression tracts from Skov et al. 
 
 ## Analyses and scripts
 ### Calculating archaic allele density
-archaic_snp_density_sprime_admixed.py divides the genomes of the admixed American populations (currently set to PEL, MXL, CLM, and PUR) into ancestry segments, and then calculates the % of sites within those ancestry segments that are classified as archaic by Sprime.
-* Usage: python3 archaic_snp_density_sprime_admixed.py [archaic_set], where archaic_set refers to the set of archaic sites under analysis. Options for archaic_set are nd_either, nd_both, n_only, n_all, d_only, d_all, and are explained fully at the top of the script.
-* Inputs: 1000 Genomes vcf and panel file, Sprime calls, and modern ancestry tract calls. Input file paths are all specified in the script itself and will need to be altered to fit your organization system. (Variables that will need to be checked are pop_file (1000 Genomes panel file, line 26), outfile (output file name, line 25), infile (the ancestry tract bed files, line 83), modern_file (vcf file, line 137), and sprime_file (sprime calls, line 140)
-* Output: A csv file where each row is a different ancestry tract in a different individual and the columns are, in order, the population and ancestry call separated by an underscore, the individual ID, the coordinates of the tract in standard BED format, the number of archaic alleles, the length of the tract, and the density (the number of archaic alleles divided by the tract length)
 
 Citation: Witt KE, Villanea F, Loughran E, Zhang X and Huerta-Sanchez E. Apportioning archaic variants among modern populations. *Phil. Trans. R. Soc. B.* 377:20200411.
 
