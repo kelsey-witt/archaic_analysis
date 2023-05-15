@@ -11,12 +11,8 @@ The file is generated using the script allelecvg_make_table_v2_png.py. The list 
 is set to N=1, 5, 10, and 15, (ie the total number of Papuan genomes) but can be adjusted in line 36.
 
 Usage: python3 archaic_mp_cvg_ss.py [archaic_set], where archaic_set specifies which archaic individual(s) 
-has/have the allele for it to be considered as "archaic". Options are "na_only" (found only in Altai Neanderthal),
-"nc_only" (found only in Chagyrskaya Neanderthal), "nv_only" (found only in Vindija Neanderthal), "d_only"
-(found only in Denisovan), "n_only" (found in any of the Neanderthals but not the Denisovan), "n_shared"
-(found in all three Neanderthals but not the Denisovan), "n_all" (found in any of the Neanderthals, regardless
-of presence/absence in the Denisovan), "d_all" (found in the Denisovan, regardless of presence/absence in any
-Neanderthals), "arch_shared" (shared across all four archaic humans), and "arch_all" (any archaic allele
+has/have the allele for it to be considered as "archaic". Options are "d_only" (found only in Denisovan), 
+"n_only" (found in any of the Neanderthals but not the Denisovan), and "arch_all" (any archaic allele
 present in any individual).
 
 This script generates a csv file for each sample size, labeled "[archaic_set]_png_cvg_[N]ind_100x.csv", where N
@@ -30,7 +26,7 @@ import random
 import sys
 import gzip
 
-archaic_set = sys.argv[1] #possible options: arch_all, arch_shared, n_all, n_only, na_only, nc_only, nv_only, n_shared, d_all, d_only
+archaic_set = sys.argv[1] #possible options: arch_all, n_only, d_only
 
 infile = "./" + archaic_set + "_snps_per_ind_png.csv"
 sample_sizes = [1,5,10,15]
